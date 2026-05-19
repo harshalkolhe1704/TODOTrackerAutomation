@@ -1,8 +1,11 @@
 Feature: ToDo Tracker
 
+Background:
+Given User opens the application
+
   Scenario: Full Task Flow
 
-    Given User opens the application
+    
     When User creates tasks from Excel
     And User updates a task
     And User marks task as complete
