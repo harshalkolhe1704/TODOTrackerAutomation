@@ -385,7 +385,17 @@ public class ToDoPage {
 
     @FindBy(id = "countdownInfo")
     WebElement countdown;
-
+    
+   
+    @FindBy(id="hoursInput")
+    WebElement hoursInput;
+    @FindBy(id="minutesInput")
+    WebElement minutesInput;
+    @FindBy(id="secondsInput")
+    WebElement secondsInput;
+    
+    
+    
     // ✅ ACTIONS
     public void slow() {
         try { 
@@ -413,9 +423,14 @@ public class ToDoPage {
     }
 
     public void setDuration(String h, String m, String s) {
-        driver.findElement(By.id("hoursInput")).sendKeys(h);
-        driver.findElement(By.id("minutesInput")).sendKeys(m);
-        driver.findElement(By.id("secondsInput")).sendKeys(s);
+//        driver.findElement(By.id("hoursInput")).sendKeys(h);
+//        driver.findElement(By.id("minutesInput")).sendKeys(m);
+//        driver.findElement(By.id("secondsInput")).sendKeys(s);
+    	
+    	
+    	hoursInput.sendKeys(h);
+    	minutesInput.sendKeys(m);
+    	secondsInput.sendKeys(s);
         slow();
     }
 
@@ -426,7 +441,7 @@ public class ToDoPage {
 
     public void selectRoutineIfNeeded(String taskName) {
         if (taskName.equalsIgnoreCase("travel")) {
-            System.out.println("✅ Selecting Routine Task");
+            System.out.println("Selecting Routine Task");
 
             if (!routineCheckbox.isSelected()) {
                 routineCheckbox.click();
@@ -486,7 +501,7 @@ public class ToDoPage {
 
             if (name == null || name.trim().isEmpty()) continue;
 
-            System.out.println("➡ Creating Task: " + name);
+            System.out.println("Creating Task: " + name);
 
             enterTask(name);
             setDate();

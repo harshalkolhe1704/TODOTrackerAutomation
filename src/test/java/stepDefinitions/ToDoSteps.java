@@ -145,6 +145,7 @@ public class ToDoSteps extends Base {
     }
 
     @When("User creates tasks from Excel")
+
     public void createTasks() {
         page.createTasksFromExcel();
     }
@@ -174,7 +175,7 @@ public class ToDoSteps extends Base {
     public void validateTotal() {
 
         String total = page.getTotal();
-        System.out.println("📊 Total: " + total);
+        System.out.println("Total: " + total);
 
         Assert.assertNotNull(total);
     }
@@ -184,7 +185,7 @@ public class ToDoSteps extends Base {
 
         String text = page.getCountdown(); 
 
-        System.out.println("⏳ Countdown: " + text);
+        System.out.println("Countdown: " + text);
 
         Assert.assertTrue(text.length() > 0);
     }

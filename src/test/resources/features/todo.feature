@@ -5,7 +5,6 @@ Given User opens the application
 
   Scenario: Full Task Flow
 
-    
     When User creates tasks from Excel
     And User updates a task
     And User marks task as complete

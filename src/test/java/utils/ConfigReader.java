@@ -19,6 +19,6 @@ public class ConfigReader {
             e.printStackTrace();
         }
 
-        return prop.getProperty("browser");
+        return prop.getProperty("bw");
     }
 }

@@ -1,47 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-05-19T21:24:09 IST" name="Default suite" finished-at="2026-05-19T21:25:25 IST" duration-ms="76874">
+  <suite started-at="2026-05-20T12:41:51 IST" name="Default suite" finished-at="2026-05-20T12:43:59 IST" duration-ms="128129">
     <groups>
-      <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@10683d9d]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
-      </group> <!-- cucumber -->
     </groups>
-    <test started-at="2026-05-19T21:24:09 IST" name="Default test" finished-at="2026-05-19T21:25:25 IST" duration-ms="76874">
-      <class name="runner.TestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.TestRunner@10683d9d]" started-at="2026-05-19T21:24:09 IST" name="setUpClass" finished-at="2026-05-19T21:24:09 IST" duration-ms="764" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@7730ef88]]>
-              </value>
-            </param>
-          </params>
+    <test started-at="2026-05-20T12:41:51 IST" name="Default test" finished-at="2026-05-20T12:43:59 IST" duration-ms="128129">
+      <class name="tests.TestNGToDo">
+        <test-method is-config="true" signature="openApp()[pri:0, instance:tests.TestNGToDo@7c7a06ec]" started-at="2026-05-20T12:41:51 IST" name="openApp" finished-at="2026-05-20T12:42:26 IST" duration-ms="34460" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@10683d9d]" started-at="2026-05-19T21:24:09 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-05-19T21:25:25 IST" duration-ms="76007" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Full Task Flow"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["ToDo Tracker"]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- openApp -->
+        <test-method signature="createTasks()[pri:1, instance:tests.TestNGToDo@7c7a06ec]" started-at="2026-05-20T12:42:26 IST" name="createTasks" finished-at="2026-05-20T12:43:28 IST" duration-ms="62430" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.TestRunner@10683d9d]" started-at="2026-05-19T21:25:25 IST" name="tearDownClass" finished-at="2026-05-19T21:25:25 IST" duration-ms="39" status="PASS">
+        </test-method> <!-- createTasks -->
+        <test-method signature="updateTask()[pri:0, instance:tests.TestNGToDo@7c7a06ec]" started-at="2026-05-20T12:43:28 IST" name="updateTask" finished-at="2026-05-20T12:43:39 IST" depends-on-methods="tests.TestNGToDo.createTasks" duration-ms="10977" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDownClass -->
-      </class> <!-- runner.TestRunner -->
+        </test-method> <!-- updateTask -->
+        <test-method signature="completeTask()[pri:0, instance:tests.TestNGToDo@7c7a06ec]" started-at="2026-05-20T12:43:39 IST" name="completeTask" finished-at="2026-05-20T12:43:41 IST" depends-on-methods="tests.TestNGToDo.updateTask" duration-ms="1911" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- completeTask -->
+        <test-method signature="calcTotal()[pri:2, instance:tests.TestNGToDo@7c7a06ec]" started-at="2026-05-20T12:43:41 IST" name="calcTotal" finished-at="2026-05-20T12:43:43 IST" depends-on-methods="tests.TestNGToDo.completeTask" duration-ms="1744" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- calcTotal -->
+        <test-method signature="checkCountdown()[pri:10, instance:tests.TestNGToDo@7c7a06ec]" started-at="2026-05-20T12:43:43 IST" name="checkCountdown" finished-at="2026-05-20T12:43:43 IST" duration-ms="218" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkCountdown -->
+        <test-method is-config="true" signature="deleteTask()[pri:0, instance:tests.TestNGToDo@7c7a06ec]" started-at="2026-05-20T12:43:43 IST" name="deleteTask" finished-at="2026-05-20T12:43:59 IST" duration-ms="16007" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteTask -->
+      </class> <!-- tests.TestNGToDo -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

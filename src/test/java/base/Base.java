@@ -91,7 +91,7 @@ public class Base {
 
         String browser = ConfigReader.getBrowser();
 
-        System.out.println("🚀 Launching Browser: " + browser);
+        System.out.println("---> Launching Browser: " + browser);
 
         if (browser.equalsIgnoreCase("chrome")) {
             driver = new ChromeDriver();
@@ -100,7 +100,7 @@ public class Base {
             driver = new EdgeDriver();
         }
         else {
-            System.out.println("❌ Invalid browser, defaulting to Chrome");
+            System.out.println("Invalid browser, defaulting to Chrome");
             driver = new ChromeDriver();
         }
 
@@ -111,7 +111,7 @@ public class Base {
         driver.get("https://springexplorers.vercel.app/");
 
         pause(2000);
-        System.out.println("✅ Application Loaded Successfully");
+        System.out.println("Application Loaded Successfully");
     }
 
     public void tearDown() {
